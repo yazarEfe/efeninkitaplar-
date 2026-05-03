@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+          import { useState } from "react";
 
 export default function YeniAskerSite() {
   const [sayfa, setSayfa] = useState("giris");
@@ -198,6 +199,19 @@ export default function YeniAskerSite() {
             <div style={{ marginTop: "40px" }}>
               <h3>Yorumlar</h3>
 
+              <input
+                type="text"
+                placeholder="Kullanıcı adın"
+                style={{
+                  width: "100%",
+                  padding: "14px",
+                  borderRadius: "12px",
+                  fontSize: "16px",
+                  marginTop: "15px",
+                  marginBottom: "15px",
+                }}
+              />
+
               <textarea
                 placeholder="Yorumunu yaz..."
                 style={{
@@ -224,6 +238,8 @@ export default function YeniAskerSite() {
 
               <div style={{ marginTop: "25px" }}>
                 <h4>Diğer Okuyucu Yorumları</h4>
+                <p>@okuyucu1: Giriş bölümü çok sürükleyici olmuş.</p>
+                <p>@kitapsever: Emir karakteri gerçekten dikkat çekiyor.</p>
               </div>
             </div>
           </div>
@@ -232,4 +248,3 @@ export default function YeniAskerSite() {
     </div>
   );
 }
-
