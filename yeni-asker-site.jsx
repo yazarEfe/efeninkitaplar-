@@ -3,11 +3,7 @@ import { useState } from "react";
 export default function YeniAskerSite() {
   const [sayfa, setSayfa] = useState("giris");
 
-  const girisMetni = `Merhaba! Ben Emir Ulukurt.
-Kendimi üç kelimeyle tanıtacak olsam;
-Şebnem Ferah, müzik dinlemek ve askerlik derdim.
-Hayat bazen insanı hiç beklemediği savaşların içine sürükler.
-Ve bazı savaşlar, kalpte başlar.`;
+  const girisMetni = `Merhaba! Ben Emir Ulukurt. Kendimi tanıtacak 3 kelime olsa Şebnem Ferah, müzik dinlemek ve askerlik. Evet! askerlik. Çünkü ben bordo bereli asker oldum. İlk görev yerim ise Iğdır. En çok ise Hakkâri olması isterdim ama buna da şükür. Bugünün akşamı ise yola çıkacağım. Yola çıkmadan ise yapacağım bazı görevler var. Görevlerim şunlar; Annemi ziyaret etmek, bavulumu hazırlamak ve babamın mezarına gitmek. Tabii ki ilk önce rahmetli babamın mezarına gidecektim. Babam ben 9 yaşında öldürüldü. Öldürüldü diyorum çünkü bir katili var ve ben katili biliyorum: Eski komşumuz Harun Uzun. Bu adam babamı öldürmüştü ve bunu sadece ben biliyorum. Çünkü o zamanlar babamın öldürüldü zamanlar o katil hâkime rüşvet verdiği için kimse gerçeği bilmiyordu. İçimde bu acı ile büyümüştüm. Zaten şimdi babamın yanındaydım. Babama bir sözüm vardı o da asker olmak. Evet, şu an asker olmuştum ama babam yanımda yoktu. Sanki babam cevap verebilecekmiş gibi seslendim: ''Baba, ben asker oldum Iğdır’a ilk görev yerime bugün gideceğim.'' Tabii ki de ses gelmedi. Gözümden yanağıma doğru yaş geldiğini hissettim. Hemen sol elimin tersiyle sildim. ''Baba, ben gidiyorum ama her Ankara’ya geldiğimde yanına geleceğim söz'' dedim ve mezarlıktan ayrıldım. Arabada arkada çalan Çakıl Taşları eşliğinde annemin yanına gidiyordum. Annem anneannem ile yaşıyor. Şarkı bittiğinde diğer bir en sevdiğim şarkı olan Benim Adım Orman şarkısı başladı. Tam en sevdiğim yerindeyken geldiğimi fark ettim ve evin kapısını çaldım. Kapıyı annem açtı. Hemen anneme sarıldım. O da bana sarılarak ''Oğlum, canım oğlum hoş geldin'' dedi. Ben de anneme ''Hoş buldum annem. Maalesef burada çok duramayacağım. Biliyorsun bugün Iğdır’a gideceğim. Anneannemi görüp eşyalarımı hazırlamam gerekiyor.'' dedim. Annem bana buruk bir tebessüm ile ''Tamam oğlum, ben anneanneni çağırıyım.'' dedi ve evin içine girdi. Annemi görünce ''Ooo. Anneanne nasılsın?'' dedim ve ona da sarıldım. Anneannem ise ''Kuzum. Hoş geldin.'' dedi. Ben de aynı şeyleri anneanneme anlattıktan sonra geri arabaya bindim ve eve doğru yol aldım. Eve geldiğimde ev arkadaşımı gördüm. O da benim gibi Milli Savunma Üniversitesi’nden mezun oldu ve benim gibi Iğdır’a ve aynı bölüğe gidecekti. Bu durumda çok şanslıydım çünkü en yakın arkadaşımdı. O da işlerini bitirmiş eşyalarını toplayacaktı. Aslında bana benziyordu ama huy olarak. Ne demişler sonuçta üzüm üzüme baka baka kararırmış. Birlikte arkada Şebnem Ferah-Çakıl Taşları çalınca en sevdiğim şarkı yine çalıyordu ben bu şarkıyı ömrüm sonuna kadar dinlerim. Arkadaşım Teoman ismiyle tam bir Şebnem Ferah bağımlısıydı. 2 saat boyunca bavulları hazırladıktan sonra otobüsün kalkmasına yarım saat civarı kalmıştı. Arabayla 10 dakikalık süreyle otogara gittik. Tam otobüsü beklerken birini gördüm. Güzelliği anlatılmayacak kadar güzeldi. Tam onun güzelliğine dalmışken Teoman ''Ne oldu lan Emir, aşık mı oldun yoksa?'' diye dalga geçti. 18 saat yolculuğun sonunda Iğdır’a gelmiştik ve asıl macera başlıyordu.`;
 
   return (
     <div
@@ -87,6 +83,20 @@ Ve bazı savaşlar, kalpte başlar.`;
               </div>
 
               <button
+                onClick={() => setSayfa("bilgiler")}
+                style={{
+                  marginTop: "12px",
+                  width: "100%",
+                  padding: "12px",
+                  borderRadius: "10px",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                Bilgiler
+              </button>
+
+              <button
                 onClick={() => setSayfa("bolumler")}
                 style={{
                   marginTop: "20px",
@@ -100,6 +110,25 @@ Ve bazı savaşlar, kalpte başlar.`;
                 OKU
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Bilgiler Sayfası */}
+      {sayfa === "bilgiler" && (
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <h1 style={{ marginBottom: "30px" }}>Bilgiler</h1>
+          <div
+            style={{
+              backgroundColor: "#111",
+              border: "1px solid #333",
+              borderRadius: "16px",
+              padding: "30px",
+              lineHeight: "1.8",
+              fontSize: "20px",
+            }}
+          >
+            Her 2 haftaya bir yeni bölüm geliyor...
           </div>
         </div>
       )}
