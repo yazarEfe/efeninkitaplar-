@@ -156,7 +156,20 @@ export default function YeniAskerSite() {
             padding: "30px",
           }}
         >
-          <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
+          <button
+            onClick={() => setSayfa("kitap")}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "12px",
+              border: "1px solid #333",
+              backgroundColor: "#181818",
+              color: "white",
+              cursor: "pointer",
+              marginBottom: "20px"
+            }}
+          >
+            Geri Dön
+          </button>
           <h1>Bilgiler</h1>
           <div>Her 2 haftaya bir yeni bölüm geliyor...</div>
         </div>
@@ -171,10 +184,36 @@ export default function YeniAskerSite() {
             padding: "30px",
           }}
         >
-          <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
+          <button
+            onClick={() => setSayfa("kitap")}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "12px",
+              border: "1px solid #333",
+              backgroundColor: "#181818",
+              color: "white",
+              cursor: "pointer",
+              marginBottom: "20px"
+            }}
+          >
+            Geri Dön
+          </button>
           <h1>Bölümler</h1>
           <h2>GİRİŞ</h2>
-          <button onClick={() => setSayfa("okuma")}>Oku</button>
+          <button
+            onClick={() => setSayfa("okuma")}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "12px",
+              border: "1px solid #333",
+              backgroundColor: "#181818",
+              color: "white",
+              cursor: "pointer",
+              marginTop: "12px"
+            }}
+          >
+            Oku
+          </button>
         </div>
       )}
 
