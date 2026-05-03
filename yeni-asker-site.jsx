@@ -6,6 +6,10 @@ export default function YeniAskerSite() {
   const [yorumMetni, setYorumMetni] = useState("");
   const [yorumlar, setYorumlar] = useState([]);
 
+  const yorumSil = (indexSil) => {
+    setYorumlar(yorumlar.filter((_, index) => index !== indexSil));
+  };
+
   const yorumGonder = () => {
     if (!kullaniciAdi.trim() || !yorumMetni.trim()) return;
 
@@ -124,7 +128,15 @@ export default function YeniAskerSite() {
               <div style={{ marginTop: "20px" }}>
                 <h4>Okuyucu Yorumları</h4>
                 {yorumlar.map((yorum, index) => (
-                  <p key={index}>{yorum}</p>
+                  <div key={index} style={{ marginBottom: "12px" }}>
+                    <p>{yorum}</p>
+                    <button
+                      type="button"
+                      onClick={() => yorumSil(index)}
+                    >
+                      Yorumu Sil
+                    </button>
+                  </div>
                 ))}
               </div>
             </div>
