@@ -227,7 +227,20 @@ export default function YeniAskerSite() {
             whiteSpace: "pre-line",
           }}
         >
-          <button onClick={() => setSayfa("bolumler")}>Geri Dön</button>
+          <button
+            onClick={() => setSayfa("bolumler")}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "12px",
+              border: "1px solid #333",
+              backgroundColor: "#181818",
+              color: "white",
+              cursor: "pointer",
+              marginBottom: "20px"
+            }}
+          >
+            Geri Dön
+          </button>
           <h1>GİRİŞ</h1>
           <p>{girisMetni}</p>
 
@@ -299,4 +312,3 @@ export default function YeniAskerSite() {
     </div>
   );
 }
-
