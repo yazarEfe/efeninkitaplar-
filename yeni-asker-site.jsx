@@ -32,7 +32,7 @@ export default function YeniAskerSite() {
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
         {/* Hoş Geldiniz */}
         <h1 style={{ fontSize: "56px", marginBottom: "20px" }}>
-          LORESSIMA
+          YAZAREFE
         </h1>
 
         <button
@@ -46,10 +46,10 @@ export default function YeniAskerSite() {
           }}
           onClick={() => setKitapAcik(true)}
         >
-          Keşfet
+          Kitap Okumaya Başla
         </button>
 
-        {/* Romanlarım */}
+        {/* Kitaplarım */}
         {kitapAcik && (
         <>
         <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>
@@ -167,4 +167,3 @@ export default function YeniAskerSite() {
     </div>
   );
 }
-
