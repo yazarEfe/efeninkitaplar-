@@ -1,5 +1,4 @@
-
-          import { useState } from "react";
+import { useState } from "react";
 
 export default function YeniAskerSite() {
   const [sayfa, setSayfa] = useState("giris");
@@ -248,3 +247,4 @@ export default function YeniAskerSite() {
     </div>
   );
 }
+
