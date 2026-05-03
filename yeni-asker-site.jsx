@@ -50,6 +50,8 @@ export default function YeniAskerSite() {
         </button>
 
         {/* Kitaplarım */}
+        {kitapAcik && (
+        <>
         <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>
           Kitaplarım
         </h2>
@@ -100,6 +102,9 @@ export default function YeniAskerSite() {
         </div>
 
         {/* Bölüm İçeriği */}
+                </>
+        )}
+
         {seciliBolum && (
           <div
             style={{
