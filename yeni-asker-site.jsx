@@ -55,7 +55,20 @@ export default function YeniAskerSite() {
 
       {sayfa === "kitap" && (
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <button onClick={() => setSayfa("giris")}>Geri Dön</button>
+          <button
+            onClick={() => setSayfa("giris")}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "12px",
+              border: "1px solid #333",
+              backgroundColor: "#181818",
+              color: "white",
+              cursor: "pointer",
+              marginBottom: "20px"
+            }}
+          >
+            Geri Dön
+          </button>
 
           <div style={{
             marginTop: "20px",
@@ -87,8 +100,8 @@ export default function YeniAskerSite() {
               duygular arasında değişmeye başlar.
             </div>
 
-            <button onClick={() => setSayfa("bilgiler")}>Bilgiler</button>
-            <button onClick={() => setSayfa("bolumler")}>OKU</button>
+            <button onClick={() => setSayfa("bilgiler")} style={{ padding: "12px 24px", borderRadius: "12px", border: "1px solid #333", backgroundColor: "#181818", color: "white", cursor: "pointer", marginTop: "12px", marginRight: "10px" }}>Bilgiler</button>
+            <button onClick={() => setSayfa("bolumler")} style={{ padding: "12px 24px", borderRadius: "12px", border: "1px solid #333", backgroundColor: "#181818", color: "white", cursor: "pointer", marginTop: "12px" }}>OKU</button>
           </div>
         </div>
       )}
@@ -102,7 +115,20 @@ export default function YeniAskerSite() {
             padding: "30px",
             marginTop: "20px"
           }}>
-          <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
+          <button
+            onClick={() => setSayfa("kitap")}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "12px",
+              border: "1px solid #333",
+              backgroundColor: "#181818",
+              color: "white",
+              cursor: "pointer",
+              marginBottom: "20px"
+            }}
+          >
+            Geri Dön
+          </button>
           <h1>Bilgiler</h1>
           <div style={{
             backgroundColor: "#111",
@@ -125,7 +151,20 @@ export default function YeniAskerSite() {
             padding: "30px",
             marginTop: "20px"
           }}>
-          <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
+          <button
+            onClick={() => setSayfa("kitap")}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "12px",
+              border: "1px solid #333",
+              backgroundColor: "#181818",
+              color: "white",
+              cursor: "pointer",
+              marginBottom: "20px"
+            }}
+          >
+            Geri Dön
+          </button>
           <h1>Bölümler</h1>
 
           <div style={{
@@ -160,6 +199,7 @@ export default function YeniAskerSite() {
               <h3>Yorumlar</h3>
 
               <input
+                style={{ width: "100%", padding: "14px", borderRadius: "12px", border: "1px solid #333", backgroundColor: "#181818", color: "white", marginTop: "15px" }}
                 type="text"
                 placeholder="Kullanıcı adın"
                 value={kullaniciAdi}
@@ -167,6 +207,7 @@ export default function YeniAskerSite() {
               />
 
               <textarea
+                style={{ width: "100%", minHeight: "120px", padding: "14px", borderRadius: "12px", border: "1px solid #333", backgroundColor: "#181818", color: "white", marginTop: "15px"
                 placeholder="Yorumunu yaz..."
                 value={yorumMetni}
                 onChange={(e) => setYorumMetni(e.target.value)}
