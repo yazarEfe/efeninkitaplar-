@@ -8,10 +8,9 @@ export default function YeniAskerSite() {
       fontFamily: "Arial"
     }}>
       <h1 style={{ fontSize: "48px" }}>YENİ ASKER</h1>
-
-      <p style={{ fontSize: "20px", marginTop: "20px" }}>
-        İnat. Gurur. Aşk.
-      </p>
+<p style={{ fontSize: "20px", marginTop: "20px" }}>
+  Yeni asker olan Emir'in macerası...
+</p>
 
       <h2 style={{ marginTop: "40px" }}>
         YENİ ASKER 1
