@@ -2,6 +2,22 @@ import { useState } from "react";
 
 export default function YeniAskerSite() {
   const [sayfa, setSayfa] = useState("giris");
+  const [kullaniciAdi, setKullaniciAdi] = useState("");
+  const [yorumMetni, setYorumMetni] = useState("");
+  const [yorumlar, setYorumlar] = useState([]);
+
+  const yorumGonder = () => {
+    console.log("yorum gönderildi");
+    if (!kullaniciAdi.trim() || !yorumMetni.trim()) return;
+
+    setYorumlar([
+      ...yorumlar,
+      `@${kullaniciAdi}: ${yorumMetni}`,
+    ]);
+
+    setKullaniciAdi("");
+    setYorumMetni("");
+  };
 
   const girisMetni = `Merhaba! Ben Emir Ulukurt. Kendimi tanıtacak 3 kelime olsa Şebnem Ferah, müzik dinlemek ve askerlik. Evet! askerlik. Çünkü ben bordo bereli asker oldum. İlk görev yerim ise Iğdır. En çok ise Hakkâri olması isterdim ama buna da şükür. Bugünün akşamı ise yola çıkacağım. Yola çıkmadan ise yapacağım bazı görevler var. Görevlerim şunlar; Annemi ziyaret etmek, bavulumu hazırlamak ve babamın mezarına gitmek. Tabii ki ilk önce rahmetli babamın mezarına gidecektim. Babam ben 9 yaşında öldürüldü. Öldürüldü diyorum çünkü bir katili var ve ben katili biliyorum: Eski komşumuz Harun Uzun. Bu adam babamı öldürmüştü ve bunu sadece ben biliyorum. Çünkü o zamanlar babamın öldürüldü zamanlar o katil hâkime rüşvet verdiği için kimse gerçeği bilmiyordu. İçimde bu acı ile büyümüştüm. Zaten şimdi babamın yanındaydım. Babama bir sözüm vardı o da asker olmak. Evet, şu an asker olmuştum ama babam yanımda yoktu. Sanki babam cevap verebilecekmiş gibi seslendim: ''Baba, ben asker oldum Iğdır’a ilk görev yerime bugün gideceğim.'' Tabii ki de ses gelmedi. Gözümden yanağıma doğru yaş geldiğini hissettim. Hemen sol elimin tersiyle sildim. ''Baba, ben gidiyorum ama her Ankara’ya geldiğimde yanına geleceğim söz'' dedim ve mezarlıktan ayrıldım. Arabada arkada çalan Çakıl Taşları eşliğinde annemin yanına gidiyordum. Annem anneannem ile yaşıyor. Şarkı bittiğinde diğer bir en sevdiğim şarkı olan Benim Adım Orman şarkısı başladı. Tam en sevdiğim yerindeyken geldiğimi fark ettim ve evin kapısını çaldım. Kapıyı annem açtı. Hemen anneme sarıldım. O da bana sarılarak ''Oğlum, canım oğlum hoş geldin'' dedi. Ben de anneme ''Hoş buldum annem. Maalesef burada çok duramayacağım. Biliyorsun bugün Iğdır’a gideceğim. Anneannemi görüp eşyalarımı hazırlamam gerekiyor.'' dedim. Annem bana buruk bir tebessüm ile ''Tamam oğlum, ben anneanneni çağırıyım.'' dedi ve evin içine girdi. Annemi görünce ''Ooo. Anneanne nasılsın?'' dedim ve ona da sarıldım. Anneannem ise ''Kuzum. Hoş geldin.'' dedi. Ben de aynı şeyleri anneanneme anlattıktan sonra geri arabaya bindim ve eve doğru yol aldım. Eve geldiğimde ev arkadaşımı gördüm. O da benim gibi Milli Savunma Üniversitesi’nden mezun oldu ve benim gibi Iğdır’a ve aynı bölüğe gidecekti. Bu durumda çok şanslıydım çünkü en yakın arkadaşımdı. O da işlerini bitirmiş eşyalarını toplayacaktı. Aslında bana benziyordu ama huy olarak. Ne demişler sonuçta üzüm üzüme baka baka kararırmış. Birlikte arkada Şebnem Ferah-Çakıl Taşları çalınca en sevdiğim şarkı yine çalıyordu ben bu şarkıyı ömrüm sonuna kadar dinlerim. Arkadaşım Teoman ismiyle tam bir Şebnem Ferah bağımlısıydı. 2 saat boyunca bavulları hazırladıktan sonra otobüsün kalkmasına yarım saat civarı kalmıştı. Arabayla 10 dakikalık süreyle otogara gittik. Tam otobüsü beklerken birini gördüm. Güzelliği anlatılmayacak kadar güzeldi. Tam onun güzelliğine dalmışken Teoman ''Ne oldu lan Emir, aşık mı oldun yoksa?'' diye dalga geçti. 18 saat yolculuğun sonunda Iğdır’a gelmiştik ve asıl macera başlıyordu.`;
 
@@ -60,7 +76,7 @@ export default function YeniAskerSite() {
               }}
             >
               <img
-                src="https://via.placeholder.com/240x340?text=YENI+ASKER"
+                src="https://via.placeholder.com/240x340?text=YENI+ASKER+KAPAK"
                 alt="YENİ ASKER"
                 style={{ width: "100%", borderRadius: "12px" }}
               />
@@ -200,6 +216,8 @@ export default function YeniAskerSite() {
 
               <input
                 type="text"
+                value={kullaniciAdi}
+                onChange={(e) => setKullaniciAdi(e.target.value)
                 placeholder="Kullanıcı adın"
                 style={{
                   width: "100%",
@@ -212,6 +230,8 @@ export default function YeniAskerSite() {
               />
 
               <textarea
+                value={yorumMetni}
+                onChange={(e) => setYorumMetni(e.target.value)}
                 placeholder="Yorumunu yaz..."
                 style={{
                   width: "100%",
@@ -224,6 +244,8 @@ export default function YeniAskerSite() {
               />
 
               <button
+                type="button"
+                onClick={yorumGonder}
                 style={{
                   marginTop: "15px",
                   padding: "12px 24px",
@@ -237,8 +259,9 @@ export default function YeniAskerSite() {
 
               <div style={{ marginTop: "25px" }}>
                 <h4>Diğer Okuyucu Yorumları</h4>
-                <p>@okuyucu1: Giriş bölümü çok sürükleyici olmuş.</p>
-                <p>@kitapsever: Emir karakteri gerçekten dikkat çekiyor.</p>
+                {yorumlar.map((yorum, index) => (
+                  <p key={index}>{yorum}</p>
+                ))}
               </div>
             </div>
           </div>
@@ -247,4 +270,5 @@ export default function YeniAskerSite() {
     </div>
   );
 }
+
 
