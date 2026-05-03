@@ -73,7 +73,16 @@ export default function YeniAskerSite() {
 
             <h2>YENİ ASKER 1</h2>
 
-            <div>
+            <div
+              style={{
+                backgroundColor: "#181818",
+                border: "1px solid #333",
+                borderRadius: "14px",
+                padding: "18px",
+                marginTop: "15px",
+                lineHeight: "1.7"
+              }}
+            >
               Yeni asker olan Emir'in hayatı, askerlik ve beklenmedik
               duygular arasında değişmeye başlar.
             </div>
@@ -85,7 +94,14 @@ export default function YeniAskerSite() {
       )}
 
       {sayfa === "bilgiler" && (
-        <div>
+        <div
+          style={{
+            backgroundColor: "#111",
+            border: "1px solid #333",
+            borderRadius: "16px",
+            padding: "30px",
+            marginTop: "20px"
+          }}>
           <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
           <h1>Bilgiler</h1>
           <div style={{
@@ -101,7 +117,14 @@ export default function YeniAskerSite() {
       )}
 
       {sayfa === "bolumler" && (
-        <div>
+        <div
+          style={{
+            backgroundColor: "#111",
+            border: "1px solid #333",
+            borderRadius: "16px",
+            padding: "30px",
+            marginTop: "20px"
+          }}>
           <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
           <h1>Bölümler</h1>
 
@@ -174,4 +197,3 @@ export default function YeniAskerSite() {
     </div>
   );
 }
-
