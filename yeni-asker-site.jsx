@@ -57,7 +57,14 @@ export default function YeniAskerSite() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <button onClick={() => setSayfa("giris")}>Geri Dön</button>
 
-          <div style={{ marginTop: "20px", maxWidth: "320px" }}>
+          <div style={{
+            marginTop: "20px",
+            maxWidth: "320px",
+            backgroundColor: "#111",
+            border: "1px solid #333",
+            borderRadius: "16px",
+            padding: "20px"
+          }}>
             <img
               src="https://via.placeholder.com/240x340?text=YENI+ASKER+KAPAK"
               alt="YENİ ASKER"
@@ -81,7 +88,15 @@ export default function YeniAskerSite() {
         <div>
           <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
           <h1>Bilgiler</h1>
-          <div>Her 2 haftaya bir yeni bölüm geliyor...</div>
+          <div style={{
+            backgroundColor: "#111",
+            border: "1px solid #333",
+            borderRadius: "14px",
+            padding: "24px",
+            marginTop: "20px"
+          }}>
+            Her 2 haftaya bir yeni bölüm geliyor...
+          </div>
         </div>
       )}
 
@@ -90,7 +105,13 @@ export default function YeniAskerSite() {
           <button onClick={() => setSayfa("kitap")}>Geri Dön</button>
           <h1>Bölümler</h1>
 
-          <div>
+          <div style={{
+            backgroundColor: "#111",
+            border: "1px solid #333",
+            borderRadius: "14px",
+            padding: "24px",
+            marginTop: "20px"
+          }}>
             <h2>GİRİŞ</h2>
             <button onClick={() => setSayfa("okuma")}>Oku</button>
           </div>
@@ -102,7 +123,14 @@ export default function YeniAskerSite() {
           <button onClick={() => setSayfa("bolumler")}>Geri Dön</button>
           <h1>GİRİŞ</h1>
 
-          <div style={{ whiteSpace: "pre-line" }}>
+          <div style={{
+            whiteSpace: "pre-line",
+            backgroundColor: "#111",
+            border: "1px solid #333",
+            borderRadius: "16px",
+            padding: "30px",
+            marginTop: "20px"
+          }}>
             {girisMetni}
 
             <div style={{ marginTop: "40px" }}>
