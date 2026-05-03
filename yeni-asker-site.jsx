@@ -130,6 +130,19 @@ export default function YeniAskerSite() {
           >
             Her 2 haftaya bir yeni bölüm geliyor...
           </div>
+
+          <button
+            onClick={() => setSayfa("kitap")}
+            style={{
+              marginTop: "20px",
+              padding: "12px 24px",
+              borderRadius: "10px",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Geri Dön
+          </button>
         </div>
       )}
 
@@ -181,9 +194,42 @@ export default function YeniAskerSite() {
             }}
           >
             {girisMetni}
+
+            <div style={{ marginTop: "40px" }}>
+              <h3>Yorumlar</h3>
+
+              <textarea
+                placeholder="Yorumunu yaz..."
+                style={{
+                  width: "100%",
+                  minHeight: "120px",
+                  padding: "15px",
+                  borderRadius: "12px",
+                  fontSize: "16px",
+                  marginTop: "15px",
+                }}
+              />
+
+              <button
+                style={{
+                  marginTop: "15px",
+                  padding: "12px 24px",
+                  borderRadius: "10px",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                Yorumu Gönder
+              </button>
+
+              <div style={{ marginTop: "25px" }}>
+                <h4>Diğer Okuyucu Yorumları</h4>
+              </div>
+            </div>
           </div>
         </div>
       )}
     </div>
   );
 }
+
