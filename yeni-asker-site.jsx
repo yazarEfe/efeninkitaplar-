@@ -13,11 +13,7 @@ export default function YeniAskerSite() {
     "4. BÖLÜM",
   ];
 
-  const yorumlar = [
-    "Bu bölüm çok güzel başlamış.",
-    "Emir karakteri çok dikkat çekici.",
-    "Devamını merak ettim!",
-  ];
+  const yorumlar = []; // Kullanıcı yorumları burada görünecek, hazır yorum yok
 
   return (
     <div
@@ -31,7 +27,7 @@ export default function YeniAskerSite() {
     >
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
         {/* Hoş Geldiniz */}
-        <h1 style={{ fontSize: "56px", marginBottom: "20px" }}>
+        <h1 style={{ fontSize: "72px", marginBottom: "20px", textAlign: "right" }}>
           YAZAREFE
         </h1>
 
@@ -64,6 +60,12 @@ export default function YeniAskerSite() {
             padding: "30px",
           }}
         >
+          <img
+            src="https://via.placeholder.com/300x420?text=YENI+ASKER+KAPAK"
+            alt="YENİ ASKER 1"
+            style={{ width: "220px", borderRadius: "16px", marginBottom: "20px" }}
+          />
+
           <h3 style={{ fontSize: "32px", marginBottom: "20px" }}>
             YENİ ASKER 1
           </h3>
@@ -134,11 +136,23 @@ export default function YeniAskerSite() {
                   cursor: "pointer",
                 }}
               >
-                💬 Yorum Yap ve Yorumları Gör
+                💬 Yorum Yap
               </button>
 
               {yorumAcik && (
                 <div style={{ marginTop: "20px" }}>
+                  <button
+                    style={{
+                      padding: "10px 18px",
+                      borderRadius: "10px",
+                      border: "none",
+                      cursor: "pointer",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    Yorumu Gönder
+                  </button>
+
                   <textarea
                     placeholder="Yorum yaz..."
                     style={{
