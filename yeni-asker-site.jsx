@@ -53,7 +53,7 @@ Ve bazı savaşlar, kalpte başlar.`;
       {/* 2. Sayfa */}
       {sayfa === "kitap" && (
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <div style={{ display: "flex", justifyContent: "flex-start" }}>
             <div
               style={{
                 width: "280px",
